@@ -1,0 +1,51 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as *;
+ 
+.contact-title {
+    margin: 5vh 0 5vh 0;
+    text-align: center;
+}
+
+.contact {
+    @include m.dflex(row, center, center);
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        background-color: map-get($map: $colors, $key: 'grey');
+        height: 450px; 
+        width: 500px;
+    }
+    
+    &__form h3 {
+        margin: 4vh 0 0 5vh;
+    }
+
+    &__form .form-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    &__form .form-group {
+        margin: 5vh 0 0 5vh;
+    }
+    
+    &__form label {
+        display: block; 
+    }
+
+    &__form input {
+        // margin-top: 3vh;
+        width: 90%;
+        height: 50%;
+    }
+
+    &__form textarea {
+        margin-top: 2vh;
+    }
+
+    &__form button {
+        width: 15%;
+        margin: 3vh 0 0 5vh;
+    }
+}

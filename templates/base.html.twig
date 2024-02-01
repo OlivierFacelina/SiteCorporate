@@ -2,8 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Wimbledon{% endblock %}</title>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-gotham5r@1.0.0/dist/fontsource-gotham5r.min.css">
         {% block stylesheets %}
         {% endblock %}
 
@@ -12,6 +13,50 @@
         {% endblock %}
     </head>
     <body>
-        {% block body %}{% endblock %}
+    {% block body %}
+        {% block header %}
+        <header class="header">
+            <nav class="header__nav">
+                <div class="header__nav__logo">
+                    <a href="{{ path('app_home')}}"><img class="logo" src="{{ asset('/images/logo.png')}}" alt="Logo Wimbledon"></a>
+                </div>
+                <div class="header__nav__item">
+                    <a href="{{ path('app_about')}}">A propos</a>
+                    <a href="{{ path('app_services')}}">Services</a>
+                    <a href="{{ path('app_contact')}}">Contact</a>
+                </div>
+            </nav>
+        </header>
+        {% endblock %}
+
+        {% block main %}
+        {% endblock %}
+
+        {% block footer %}
+        <footer>
+            <div class="footer">
+                <div class="services">
+                    <h3>Services</h3>
+                    <p>Web design</p>
+                    <p>Development</p>
+                    <p>Hosting</p>
+                </div>
+                <div class="about">
+                    <h3>About</h3>
+                    <p>Company</p>
+                    <p>Team</p>
+                    <p>Careers</p>
+                </div>
+            </div>
+            <div class="footer__content">
+                <h3>Site Corporate</h3>
+                <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac<br> sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus.<br> Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+            </div>
+            <div class="footer__media">
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+        </footer>
+        {% endblock %}
+    {% endblock %}
     </body>
 </html>

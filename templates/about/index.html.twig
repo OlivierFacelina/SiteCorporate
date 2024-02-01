@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ parent() }} | A propos{% endblock %}
+
+{% block main %}
+<div class="about">
+    <h2>A propos</h2>
+    <div class="history">
+        <div class="history__logo">
+            <img class="wimbledon" src="{{ asset("/images/Wimbledon.jpg")}}" alt="Wimbledon">
+        </div>
+        <div class="history__content">
+            <h3>Histoire</h3>
+            <p>Tout commence à Wimbledon, dans la banlieue de Londres (Angleterre), en 1875. Cette année là, le All England Croquet Club décide de proposer à ses adhérents un nouveau sport : le tennis ; inventé la même année, par le Major Wingfield.
+            Le All England Croquet Club a été fondé en 1869 par deux britanniques : J.H Walsh, directeur de la principale revue de loisirs du pays, The Field et Henry Jones, son rédacteur en chef. Pour 120 livres par an, ils louent une prairie située à Wimbledon, entre Worple Road et une voie de chemin de fer. En 1875, les deux fondateurs achètent donc pour 25 livres le nouveau jeu du Major Wingfield.  
+            Les adhérents du All England Croquet Club testent, ainsi, le tennis et…le corrigent à plusieurs reprises. Henry Jones ne cessera d’améliorer les règles et le jeu du tennis.</p>
+        </div>
+    </div>
+    <div class="history__part2">
+        <div class="history__content">
+            <p>En février 1877, All England Croquet Club (rebaptisé depuis peu All England Lawn-tennis And Croquet Club) traverse une mauvaise passe financière. C’est alors qu’Henry Jones propose de créer un championnat de tennis pour renflouer les caisses du club. C’est ainsi qu’en juillet 1877, le premier tournoi de Wimbledon est né. La première grande compétition de l’histoire du tennis.<br>
+            A l’époque, le tennis n’était évidement pas encore un sport à part entière mais plutôt un loisir. Néanmoins, le All England Club fit des efforts pour que Wimbledon soit une véritable compétition. Le 19 juillet, la finale du premier Wimbledon oppose un joueur de racket âgé de 27 ans, Spencer Gore, a un joueur de paume, M. Marshall. La victoire est revenu au premier (6/1 6/2 6/4) qui surprit tous ses adversaires en jouant un jeu offensif et puissant (montée au filet, volée, frappe puissante,…).</p>
+        </div>
+        <div class="history__logo">
+            <img class="wimbledon" src="{{ asset("/images/beginnings_wimbledon.jpg")}}" alt="Wimbledon">
+        </div>
+    </div>
+    <div class="worth">
+        <div class="worth__logo">
+            <img class="wimbledon" src="{{ asset("/images/worth_wim.jpg")}}" alt="Nos valeurs">
+        </div>
+        <div class="worth__content">
+            <h3>Valeurs</h3>
+            <p>Wimbledon incarne un ensemble de valeurs profondément enracinées qui ont façonné son identité au fil des décennies. Cet événement emblématique, qui se déroule chaque année au All England Club à Londres, se distingue par plusieurs principes fondamentaux qui en font une expérience unique et inoubliable.<br>
+            L'une des valeurs les plus marquantes de Wimbledon est la tradition. Le tournoi a une longue histoire qui remonte à 1877, et il a su préserver de nombreuses traditions qui font de lui un événement à part. L'utilisation du gazon naturel, la tenue stricte en blanc pour les joueurs, les balais en buis pour l'entretien du terrain et même le délicieux fraise à la crème en sont des exemples. Ces traditions confèrent à Wimbledon une atmosphère spéciale, une connexion avec le passé qui célèbre l'héritage du tennis.</p>
+        </div>
+    </div>
+    <div class="worth__part2">
+        <div class="worth__content">
+            <p>L'intégrité occupe également une place centrale à Wimbledon. Le fair-play, le respect des adversaires et l'esprit sportif sont fortement encouragés et honorés. Les joueurs sont souvent salués pour leur comportement exemplaire sur le court, et Wimbledon a établi une réputation d'événement où l'éthique sportive prime sur tout. Les organisateurs mettent l'accent sur le respect des règles et des valeurs du tennis, renforçant ainsi l'image du tournoi en tant que gardien de l'intégrité sportive.<br>
+            En résumé, Wimbledon incarne un mélange unique de tradition, d'intégrité, d'excellence et d'inclusion. Ces valeurs ont contribué à forger la réputation mondiale de ce tournoi de tennis emblématique, faisant de lui bien plus qu'un simple événement sportif, mais plutôt une célébration de l'histoire, du talent et des principes qui font du tennis un sport exceptionnel.</p>
+        </div>
+        <div class="worth__logo">
+            <img class="wimbledon" src="{{ asset("/images/serena_wim.jpg")}}" alt="Nos valeurs">
+        </div>
+    </div>
+    <div class="palmares">
+        <div class="palmares__logo">
+            <img class="wimbledon" src="{{ asset("/images/atp_palmares.jpeg")}}" alt="Palmarès ATP">
+        </div>
+        <div class="palmares__content">
+            <h3>Palmarès | Simple messieurs (ATP)</h3>
+            <p>- <i>Roger Federer</i> est le + titré de ce Grand Chelem avec <b>8 titres</b> au compteur.</p>
+            <p>- <i>William Renshaw</i>, <i>Novak Djokovic</i>, <i>Pete Sampras</i> disposent quant à eux de <b>7 titres</b>.</p>
+            <p>- <i>Lawrence Doherty</i> et <i>Björn Borg</i> possèdent <b>5 titres</b> de Wimbledon.</p>
+            <p>- Le britannique <i>Reginald Doherty</i>, frère aîné de Lawrence, a un titre de moins que son frère, à savoir <b>4</b>. Il est ex-aequo avec les australiens <i>Anthony Wilding</i> et <i>Rod Laver</i>.</p>
+            <p>- <i>John McEnroe</i>, <i>Bill Tilden</i> et notamment <i>Fred Perry</i> ont remporté <b>3 titres</b>.</p>
+            <p>- <i>Rafael Nadal</i> et <i>Andy Murray</i> ont <b>2 titres</b> de Wimbledon, respectivement en 2008-2010 et 2013-2016.</p>
+            <p>- <i>Carlos Alcaraz</i> vient d'obtenir son <b>premier titre</b> à Wimbledon de sa carrière l'année dernière, en 2023, suite à un immense exploit de 5h contre Novak Djokovic !</p>
+        </div>
+    </div>
+    <div class="palmares wta">
+        <div class="palmares__content">
+            <h3>Palmarès | Simple mesdames (WTA)</h3>
+            <p>- <i>Martina Navratilova</i> est la + titrée de ce Grand Chelem avec <b>9 titres</b> au compteur.</p>
+            <p>- <i>Helen Wills</i> la précède avec <b>8 titres</b>.</p>
+            <p>- <i>Serena Williams</i> et <i>Steffi Graf</i> possèdent <b>7 titres</b> de Wimbledon.</p>
+            <p>- La française <i>Suzanne Lenglen</i> a <b>6</b>. Elle est ex-aequo avec la britanique <i>Blanche Bingley</i> et l'américaine <i>Billie Jean King</i>.</p>
+            <p>- <i>Venus Williams</i>, soeur aînée de <i>Serena Williams</i>, a remporté <b>5 titres</b>.</p>
+            <p>- <i>Petra Kvitova</i> s'est octroyée <b>2 titres</b> de Wimbledon.</p>
+            <p>- <i>Marketa Vondrousova</i> vient d'obtenir son <b>premier titre</b> à Wimbledon de sa carrière l'année dernière, en 2023, en battant en finale Ons Jabeur pour une troisième défaite en finale...<br> Elle est à égalité avec <i>Elena Rybakina</i> qui a quant à elle remporté son <b>premier titre</b> en 2022.</p>
+        </div>
+        <div class="palmares__logo">
+            <img class="wimbledon" src="{{ asset("/images/wta_palmares.jpg")}}" alt="Palmarès WTA">
+        </div>
+    </div>
+</div>
+{% endblock %}

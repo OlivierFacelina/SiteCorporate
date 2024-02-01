@@ -1,0 +1,25 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as *;
+
+.services h2, .services h3, .services h4 {
+    margin: 5vh 0 5vh 0;
+    text-align: center;
+}
+
+.services h3 {
+    color: map-get($map: $colors, $key: 'green')
+}
+
+.services h4 {
+    font-size: 1.5rem;
+}
+
+figure figcaption {
+    margin-bottom: 2vh;
+}
+
+figure p {
+    max-width: 399px;
+    text-align: justify;
+    margin: 0 auto;
+}

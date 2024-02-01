@@ -1,0 +1,111 @@
+@use '../abstracts/mixin' as m;
+
+.about h2 {
+    margin: 5vh 0 5vh 0;
+    text-align: center;
+}
+
+/* -------- HISTORY -------- */
+
+.history {
+    @include m.dflex(row, center, center);
+    gap: 5vw;
+    margin-bottom: 5vh;
+    &__logo img {
+        margin-left: 5vh;
+        width: 35vw;
+    }
+
+    &__content {
+        margin-right: 5vh;
+    }
+
+    &__content h3 {
+        margin-bottom: 5vh;
+    }
+}
+
+.history__part2 {
+    @include m.dflex(row, center, center);
+    // gap: 10vw;
+}
+
+.history__part2 .history__content {
+    margin-left: 5vh;
+}
+
+.history__part2 .history__logo img {
+    margin-right: 5vh;
+    width: 35vw;
+}
+
+/* ------------ WORTH ------------- */
+
+.worth {
+    margin-top: 10vh;
+    @include m.dflex(row, center, center);
+    gap: 5vw;
+    margin-bottom: 5vh;
+    &__logo img {
+        margin-left: 5vh;
+        width: 35vw;
+    }
+
+    &__content {
+        margin-right: 5vh;
+    }
+
+    &__content h3 {
+        margin-bottom: 5vh;
+    }
+}
+
+.worth__part2 {
+    @include m.dflex(row, center, center);
+    // gap: 10vw;
+}
+
+.worth__part2 .worth__content {
+    margin-left: 5vh;
+}
+
+.worth__part2 .worth__logo img {
+    margin-right: 5vh;
+    width: 35vw;
+}
+
+
+/* ------------ PALMARES ------------- */
+
+.palmares {
+    margin-top: 10vh;
+    @include m.dflex(row, center, center);
+    gap: 5vw;
+    margin-bottom: 5vh;
+    &__logo img {
+        margin-left: 5vh;
+        width: 35vw;
+    }
+
+    &__content {
+        margin-right: 5vh;
+    }
+
+    &__content h3 {
+        margin-bottom: 5vh;
+    }
+}
+
+.wta {
+    @include m.dflex(row, center, center);
+    // gap: 10vw;
+}
+
+.wta .palmares__content {
+    margin-left: 5vh;
+}
+
+.wta .palmares__logo img {
+    margin-right: 5vh;
+    width: 35vw;
+}
