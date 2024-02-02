@@ -1,0 +1,54 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as *;
+
+.services h2, .services h3, .services h4 {
+    text-align: center;
+}
+
+.services h3 {
+    color: map-get($map: $colors, $key: 'green');
+}
+
+.services h4 {
+    margin: 5vh 0 5vh 0;
+    font-size: 1.5rem;
+}
+
+.services figure figcaption {
+    margin-bottom: 2vh;
+}
+
+.services figure p {
+    max-width: 399px;
+    text-align: justify;
+    margin: 0 auto;
+}
+
+
+/* ---- RESPONSIVE ------ */
+
+@media screen and (max-width: 1024px) {
+
+.services {
+    margin: 3vw;
+    padding: 0 3vw;
+  
+    h2 {
+      font-size: 3rem;
+      text-align: center;
+      margin-bottom: 3vh;
+    }
+}
+
+.services .matches {
+    &__lst iframe {
+        height: 500px;
+    }
+    
+    figure p {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+}

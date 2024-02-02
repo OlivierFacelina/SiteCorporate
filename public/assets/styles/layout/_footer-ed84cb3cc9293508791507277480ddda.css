@@ -1,0 +1,30 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as *;
+
+footer {
+    background-color: map-get($map: $colors, $key: 'purple')
+}
+
+.footer {
+    @include m.dflex(row, space-around, center);
+    padding: 5vh;
+
+    &__content {
+        text-align: center;
+    }
+
+    &__content h3 {
+        color: map-get($map: $colors, $key: 'green');
+        font-size: 24px;
+        margin-bottom: 2vh;
+    }
+}
+
+.footer h3 {
+    color: map-get($map: $colors, $key: 'green');
+    font-size: 24px;
+}
+
+.footer p {
+    color: map-get($map: $colors, $key: 'white')
+}

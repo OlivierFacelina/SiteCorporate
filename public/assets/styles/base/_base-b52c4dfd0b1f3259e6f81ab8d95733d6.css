@@ -1,0 +1,13 @@
+@use '../abstracts/variables' as *;
+
+body {
+    color: map-get($map: $colors, $key: 'black');
+    background-color: map-get($map: $colors, $key: 'white');
+    font-family: 'Gotham5r', sans-serif;
+}
+
+h2 {
+    color: map-get($map: $colors, $key: 'purple');
+    margin: 5vh 0 5vh;
+    font-size: 2rem;
+}

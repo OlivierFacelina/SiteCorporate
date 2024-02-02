@@ -1,0 +1,10 @@
+@use '../abstracts/variables' as *;
+
+button {
+    color: map-get($map: $colors, $key: 'white');
+    background-color: map-get($map: $colors, $key: 'purple');
+    cursor: pointer;
+    border-radius: 5px;
+    width: 15%;
+    border: none;
+}

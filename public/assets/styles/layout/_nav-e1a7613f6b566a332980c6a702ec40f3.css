@@ -1,0 +1,32 @@
+@use '../abstracts/mixin' as m;
+@use '../abstracts/variables' as *;
+
+.header {
+    background-color: rgba(255, 255, 255, 0.8); 
+    transition: background-color 0.5s ease; 
+
+    &.scroll {
+        background-color: map-get($map: $colors, $key: 'white'); 
+    }
+
+    &__nav {
+        position: fixed;
+        width: 100%;
+        @include m.dflex(row, space-around, center);
+        padding: 2vh 0 0 5vh;
+    }
+    &__nav__logo img {
+        width: 5vw;
+    }
+    &__nav__item {
+        @include m.dflex(row, space-around, center);
+    }
+    &__nav__item a {
+        margin-right: 5vh;
+        font-size: 20px
+    }
+}
+
+.title {
+    color: white;
+}
