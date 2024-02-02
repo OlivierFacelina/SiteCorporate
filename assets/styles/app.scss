@@ -2,6 +2,9 @@
 @use './base/base' as b;
 @use './base/reset';
 
+/* -- COMPONENTS -- */
+@use './components/button';
+
 /* -- LAYOUT -- */
 @use './layout/footer';
 @use './layout/header';

@@ -6,9 +6,5 @@ services:
     restart: always
     ports:
       - "8080:80"
-    volumes:
-      - web-data:/var/www/html/var
     environment:
-      - COMPOSE_PROJECT_NAME=symfony
-volumes:
-  web-data:
+      - APP_ENV=prod

@@ -18,18 +18,93 @@
 }
 
 .matches {
-    margin: 3vw; 
-    padding: 0 3vw;
-    @include m.dflex(column, space-around, center);
+    h2 {
+        text-align: center;
+    }
+    /* ... */
     &__lst {
-        margin: 0 3vw;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: space-around; 
         gap: 3vw;
 
-        figcaption{
-            text-align: center;
+        figure {
+            width: 30%; 
+            margin-bottom: 3vw;
+            position: relative;
+
+            iframe {
+                width: 100%;
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+
+            figcaption {
+                text-align: center;
+                margin-top: 10px;
+            }
         }
     }
+}
+
+/* ------ RESPONSIVE ---- */
+
+@media screen and (max-width: 1024px) {
+    
+.presentation {
+    &__title h2 {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    &__desc p {
+        font-size: 2rem;
+    }
+}
+
+.matches {
+    margin: 3vw;
+    padding: 0 3vw;
+
+    @include m.dflex(column, space-around, center);
+
+    &__title {
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            margin-bottom: 5vh;
+        }
+    }
+
+    &__lst {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3vw;
+
+        figure {
+            width: 100%;
+            margin-bottom: 3vw;
+            position: relative;
+
+            iframe {
+                width: 100%;
+            }
+
+            figcaption {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 768px) {
+        &__lst figure {
+            width: 100%; 
+        }
+    }
+}
+
 }
