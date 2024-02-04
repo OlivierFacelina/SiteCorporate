@@ -41,7 +41,7 @@ input, textarea {
     margin-top: 5px;
 }
 
-button {
+.btn {
     background-color: map-get($map: $colors, $key: 'purple');
     color: #fff;
     padding: 10px 20px;
@@ -67,6 +67,7 @@ iframe {
 
 .group p {
     margin: 5px 0;
+    text-align: center;
 }
 
 .group img {
@@ -74,21 +75,29 @@ iframe {
     margin-right: 10px;
 }
 
+.checkbox {
+    @include m.dflex(row, space-around, center);
+}
+
 /* ---- RESPONSIVE ----- */
 
 @media screen and (max-width: 1024px) {
-@media screen and (max-width: 768px) {
-#contact_section {
-    flex-direction: column;
+    .contact-title {
+        font-size: 2rem;
+        color: white;
+    }
+
+    .btn {
+        padding: 10px 20px;
+        width: 30%;
+    }
+
+    .contact__information {
+        display: block;
+    }
+
+    .checkbox input {
+        margin-right: 2vh;
+    }
 }
 
-.contact__form, .contact__information {
-    padding: 20px;
-}
-
-iframe {
-    height: 200px;
-}
-  }
-  
-}

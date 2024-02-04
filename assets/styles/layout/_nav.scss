@@ -2,18 +2,13 @@
 @use '../abstracts/variables' as *;
 
 .header {
-    background-color: rgba(255, 255, 255, 0.8); 
-    transition: background-color 0.5s ease; 
-
-    &.scroll {
-        background-color: map-get($map: $colors, $key: 'purple'); 
-    }
 
     &__nav {
         position: fixed;
         width: 100%;
         @include m.dflex(row, space-around, center);
         padding: 2vh 0 0 5vh;
+        background-color: rgba(255, 255, 255, 0.8);
     }
     &__nav__logo img {
         width: 5vw;
@@ -22,11 +17,56 @@
         @include m.dflex(row, space-around, center);
     }
     &__nav__item a {
+        color: map-get($map: $colors, $key: 'purple');
         margin-right: 5vh;
         font-size: 20px
     }
+
+    &__nav__item .active {
+        text-decoration: underline;
+    }
+}
+
+.burger-menu {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.bar {
+    height: 3px;
+    width: 5vw;
+    background-color: map-get($map: $colors, $key: 'white');
+    margin: 6px 0;
 }
 
 .title {
     color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .burger-menu {
+        display: flex;
+    }
+
+    .header__nav__item {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: map-get($map: $colors, $key: 'white');
+    }
+
+    .header__nav__item a {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .header__nav.show {
+        display: flex;
+    }
 }

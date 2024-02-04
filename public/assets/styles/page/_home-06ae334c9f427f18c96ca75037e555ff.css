@@ -56,12 +56,13 @@
     
 .presentation {
     &__title h2 {
-        font-size: 3rem;
+        font-size: 2rem;
         text-align: center;
     }
 
     &__desc p {
-        font-size: 2rem;
+        font-size: 1rem;
+        text-align: left;
     }
 }
 

@@ -110,3 +110,55 @@
     width: 35vw;
 }
 
+/* ------ RESPONSIVE -------- */
+
+@media screen and (max-width: 1024px) {
+    .history, .worth, .palmares {
+        display: block;
+    }
+
+    .about .wimbledon {
+        width: 100%;
+        margin-left: 0; 
+        margin-right: 0; 
+        margin-bottom: 1rem; 
+    }
+
+    .history__content, .worth__content, .palmares__content {
+        margin-right: 0; 
+        text-align: center; 
+    }
+
+    .history__part2, .worth__part2, .palmares.wta {
+        flex-direction: column-reverse; 
+    }
+
+    .history__part2 .history__logo img, .worth__part2 .worth__logo img, .palmares.wta .palmares__logo img {
+        width: 100%;
+        margin-top: 1rem; 
+        margin-bottom: 0;
+    }
+
+    .history__part2 .history__content, .worth__part2 .worth__content, .palmares.wta .palmares__content {
+        margin-left: 0; 
+    }
+
+    .about h3 {
+        font-size: 1.5rem;
+    }
+
+    .about p {
+        text-align: justify;
+        margin: 1vh 2vh 0 2vh;
+    }
+
+    .palmares_atp_title, .palmares_wta_title {
+        margin: 0 2vh 0 2vh;
+    }
+
+    .palmares__content {
+        margin-bottom: 5vh;
+    }
+}
+
+

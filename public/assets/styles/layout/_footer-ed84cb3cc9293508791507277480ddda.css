@@ -9,15 +9,34 @@ footer {
     @include m.dflex(row, space-around, center);
     padding: 5vh;
 
+    &__services h3, &__about h3{
+        margin-bottom: 2vh;
+    }
+
     &__content {
         text-align: center;
     }
 
-    &__content h3 {
+    &__content h1 {
         color: map-get($map: $colors, $key: 'green');
         font-size: 24px;
         margin-bottom: 2vh;
     }
+
+    &__content p {
+        color: map-get($map: $colors, $key: 'white');
+    }
+
+    &__media {
+        color: map-get($map: $colors, $key: 'white');
+        @include m.dflex(row, center, center);
+        padding-bottom: 5vh;
+    }
+
+    &__media iconify-icon {
+        margin-top: 5vh;
+    }
+
 }
 
 .footer h3 {

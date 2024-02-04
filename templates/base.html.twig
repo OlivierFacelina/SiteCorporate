@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Wimbledon{% endblock %}</title>
+        <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fontsource-gotham5r@1.0.0/dist/fontsource-gotham5r.min.css">
         {% block stylesheets %}
@@ -21,9 +23,14 @@
                     <a href="{{ path('app_home')}}"><img class="logo" src="{{ asset('/images/logo.png')}}" alt="Logo Wimbledon"></a>
                 </div>
                 <div class="header__nav__item">
-                    <a href="{{ path('app_about')}}">A propos</a>
-                    <a href="{{ path('app_services')}}">Services</a>
-                    <a href="{{ path('app_contact')}}">Contact</a>
+                    <a href="{{ path('app_about')}}" {% if app.request.attributes.get('_route') == 'app_about' %}class="active"{% endif %}>A propos</a>
+                    <a href="{{ path('app_services')}}" {% if app.request.attributes.get('_route') == 'app_services' %}class="active"{% endif %}>Services</a>
+                    <a href="{{ path('app_contact')}}" {% if app.request.attributes.get('_route') == 'app_contact' %}class="active"{% endif %}>Contact</a>
+                </div>
+                 <div class="burger-menu">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
                 </div>
             </nav>
         </header>
@@ -35,13 +42,13 @@
         {% block footer %}
         <footer>
             <div class="footer">
-                <div class="services">
+                <div class="footer__services">
                     <h3>Services</h3>
                     <p>Web design</p>
                     <p>Development</p>
                     <p>Hosting</p>
                 </div>
-                <div class="about">
+                <div class="footer__about">
                     <h3>About</h3>
                     <p>Company</p>
                     <p>Team</p>
@@ -49,11 +56,13 @@
                 </div>
             </div>
             <div class="footer__content">
-                <h3>Site Corporate</h3>
-                <p>Praesent sed lobortis mi. Suspendisse vel placerat ligula. Vivamus ac<br> sem lacus. Ut vehicula rhoncus elementum. Etiam quis tristique lectus.<br> Aliquam in arcu eget velit pulvinar dictum vel in justo.</p>
+                <h1>Site Corporate</h1>
+                <p>Wimbledon, joyau du tennis à Londres, incarne l'excellence sportive. <br>Son tournoi emblématique, le Wimbledon Championships, sur les courts de gazon, attire l'élite mondiale.<br> Les traditions élégantes, fraises et crème, ajoutent à son charme unique sur Church Road, créant une expérience inoubliable pour les passionnés du tennis.</p>
             </div>
             <div class="footer__media">
-                <i class="fa-brands fa-facebook"></i>
+                <iconify-icon icon="bi:instagram" width="40px"></iconify-icon>
+                <iconify-icon icon="bi:facebook" width="40px"></iconify-icon>
+                <iconify-icon icon="bi:linkedin" width="40px"></iconify-icon>
             </div>
         </footer>
         {% endblock %}
