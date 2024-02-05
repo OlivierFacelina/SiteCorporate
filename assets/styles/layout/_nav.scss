@@ -37,24 +37,24 @@
 }
 
 @media screen and (max-width: 768px) {
-    .header__nav__item {
-        // display: none;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: map-get($map: $colors, $key: 'white');
-    }
+    // .header__nav__item {
+    //     // display: none;
+    //     flex-direction: column;
+    //     width: 100%;
+    //     text-align: center;
+    //     position: absolute;
+    //     top: 60px;
+    //     left: 0;
+    //     background-color: map-get($map: $colors, $key: 'white');
+    // }
 
-    .header__nav__item a {
-        padding: 10px;
-        width: 100%;
-        box-sizing: border-box;
-    }
+    // .header__nav__item a {
+    //     padding: 10px;
+    //     width: 100%;
+    //     box-sizing: border-box;
+    // }
 
-    .header__nav.show {
-        display: flex;
-    }
+    // .header__nav.show {
+    //     display: flex;
+    // }
 }
