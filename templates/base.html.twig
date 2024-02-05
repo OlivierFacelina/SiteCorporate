@@ -27,11 +27,6 @@
                     <a href="{{ path('app_services')}}" {% if app.request.attributes.get('_route') == 'app_services' %}class="active"{% endif %}>Services</a>
                     <a href="{{ path('app_contact')}}" {% if app.request.attributes.get('_route') == 'app_contact' %}class="active"{% endif %}>Contact</a>
                 </div>
-                 <div class="burger-menu">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
             </nav>
         </header>
         {% endblock %}

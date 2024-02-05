@@ -32,24 +32,13 @@
     cursor: pointer;
 }
 
-.bar {
-    height: 3px;
-    width: 5vw;
-    background-color: map-get($map: $colors, $key: 'white');
-    margin: 6px 0;
-}
-
 .title {
     color: white;
 }
 
 @media screen and (max-width: 768px) {
-    .burger-menu {
-        display: flex;
-    }
-
     .header__nav__item {
-        display: none;
+        // display: none;
         flex-direction: column;
         width: 100%;
         text-align: center;
