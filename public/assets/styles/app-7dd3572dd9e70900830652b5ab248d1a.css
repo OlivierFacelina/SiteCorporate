@@ -44,13 +44,30 @@ footer {
   align-items: center;
   padding: 5vh;
 }
+.footer__services h3, .footer__about h3 {
+  margin-bottom: 2vh;
+}
 .footer__content {
   text-align: center;
 }
-.footer__content h3 {
+.footer__content h1 {
   color: #00703C;
   font-size: 24px;
   margin-bottom: 2vh;
+}
+.footer__content p {
+  color: white;
+}
+.footer__media {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5vh;
+}
+.footer__media iconify-icon {
+  margin-top: 5vh;
 }
 
 .footer h3 {
@@ -65,14 +82,15 @@ footer {
 header {
   height: 100vh;
   background-image: url("https://www.atptour.com/-/media/images/news/2023/07/16/14/43/alcaraz-djokovic-wimbledon-2023-sunday-final-second-set.jpg");
+  background-size: cover;
 }
 
-.header {
-  background-color: rgba(255, 255, 255, 0.8);
-  transition: background-color 0.5s ease;
-}
-.header.scroll {
-  background-color: white;
+@media screen and (max-width: 1024px) {
+  header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+  }
 }
 .header__nav {
   position: fixed;
@@ -82,6 +100,7 @@ header {
   justify-content: space-around;
   align-items: center;
   padding: 2vh 0 0 5vh;
+  background-color: rgba(255, 255, 255, 0.8);
 }
 .header__nav__logo img {
   width: 5vw;
@@ -93,14 +112,54 @@ header {
   align-items: center;
 }
 .header__nav__item a {
+  color: #54008B;
   margin-right: 5vh;
   font-size: 20px;
+}
+.header__nav__item .active {
+  text-decoration: underline;
+}
+
+.burger-menu {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  height: 3px;
+  width: 5vw;
+  background-color: white;
+  margin: 6px 0;
 }
 
 .title {
   color: white;
 }
 
+@media screen and (max-width: 768px) {
+  .burger-menu {
+    display: flex;
+  }
+  .header__nav__item {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background-color: white;
+  }
+  .header__nav__item a {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .header__nav.show {
+    display: flex;
+  }
+}
 /* -- PAGE -- */
 .about h2 {
   margin: 5vh 0 5vh 0;
@@ -217,6 +276,46 @@ header {
   width: 35vw;
 }
 
+/* ------ RESPONSIVE -------- */
+@media screen and (max-width: 1024px) {
+  .history, .worth, .palmares {
+    display: block;
+  }
+  .about .wimbledon {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  .history__content, .worth__content, .palmares__content {
+    margin-right: 0;
+    text-align: center;
+  }
+  .history__part2, .worth__part2, .palmares.wta {
+    flex-direction: column-reverse;
+  }
+  .history__part2 .history__logo img, .worth__part2 .worth__logo img, .palmares.wta .palmares__logo img {
+    width: 100%;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  .history__part2 .history__content, .worth__part2 .worth__content, .palmares.wta .palmares__content {
+    margin-left: 0;
+  }
+  .about h3 {
+    font-size: 1.5rem;
+  }
+  .about p {
+    text-align: justify;
+    margin: 1vh 2vh 0 2vh;
+  }
+  .palmares_atp_title, .palmares_wta_title {
+    margin: 0 2vh 0 2vh;
+  }
+  .palmares__content {
+    margin-bottom: 5vh;
+  }
+}
 .contact-title {
   text-align: center;
   padding: 20px 0;
@@ -257,7 +356,7 @@ input, textarea {
   margin-top: 5px;
 }
 
-button {
+.btn {
   background-color: #54008B;
   color: #fff;
   padding: 10px 20px;
@@ -286,6 +385,7 @@ iframe {
 
 .group p {
   margin: 5px 0;
+  text-align: center;
 }
 
 .group img {
@@ -293,16 +393,28 @@ iframe {
   margin-right: 10px;
 }
 
+.checkbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
 /* ---- RESPONSIVE ----- */
-@media screen and (max-width: 1024px) and (max-width: 768px) {
-  #contact_section {
-    flex-direction: column;
+@media screen and (max-width: 1024px) {
+  .contact-title {
+    font-size: 2rem;
+    color: white;
   }
-  .contact__form, .contact__information {
-    padding: 20px;
+  .btn {
+    padding: 10px 20px;
+    width: 30%;
   }
-  iframe {
-    height: 200px;
+  .contact__information {
+    display: block;
+  }
+  .checkbox input {
+    margin-right: 2vh;
   }
 }
 /* -- PRESENTATION -- */
@@ -353,11 +465,12 @@ iframe {
 /* ------ RESPONSIVE ---- */
 @media screen and (max-width: 1024px) {
   .presentation__title h2 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
   }
   .presentation__desc p {
-    font-size: 2rem;
+    font-size: 1rem;
+    text-align: left;
   }
   .matches {
     margin: 3vw;
@@ -438,4 +551,4 @@ iframe {
   }
 }
 
-/*# sourceMappingURL=app.output.css.map */
+/*# sourceMappingURL=data:application/json;charset=utf-8,%7B%22version%22:3,%22sourceRoot%22:%22%22,%22sources%22:%5B%22../../assets/styles/app.scss%22,%22../../assets/styles/base/_base.scss%22,%22../../assets/styles/base/_reset.scss%22,%22../../assets/styles/components/_button.scss%22,%22../../assets/styles/layout/_footer.scss%22,%22../../assets/styles/abstracts/_mixin.scss%22,%22../../assets/styles/layout/_header.scss%22,%22../../assets/styles/layout/_nav.scss%22,%22../../assets/styles/page/_about.scss%22,%22../../assets/styles/page/_contact.scss%22,%22../../assets/styles/page/_home.scss%22,%22../../assets/styles/page/_services.scss%22%5D,%22names%22:%5B%5D,%22mappings%22:%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%22,%22file%22:%22app.output.css%22%7D */
