@@ -8,7 +8,7 @@
         "type": "js"
     },
     "\/assets\/@symfony\/stimulus-bundle\/controllers.js": {
-        "path": "\/assets\/@symfony\/stimulus-bundle\/controllers-20d1514fd94d72a9c2d52e553862ddfb.js",
+        "path": "\/assets\/@symfony\/stimulus-bundle\/controllers-9d42643c079ab11f27a3a9614f81cc2f.js",
         "type": "js"
     },
     "\/assets\/@symfony\/ux-turbo\/turbo_controller.js": {
@@ -20,11 +20,11 @@
         "type": "js"
     },
     "\/assets\/styles\/app.css": {
-        "path": "\/assets\/styles\/app-9e05222ff6d569f8f37780cd6fd17c68.css",
+        "path": "\/assets\/styles\/app-a0f88daec70e618665afc7e15509e93c.css",
         "type": "css"
     },
     "\/assets\/js\/script.js": {
-        "path": "\/assets\/js\/script-7be6e9c192832f947af94b902b6a8eb9.js",
+        "path": "\/assets\/js\/script-99aa06d3014798d86001c324468d497f.js",
         "type": "js"
     },
     "@hotwired\/stimulus": {
